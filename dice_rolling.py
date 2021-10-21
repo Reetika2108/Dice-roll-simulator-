@@ -5,7 +5,7 @@ import random
 # toplevel widget which represents the main window of an application
 root = tkinter.Tk()
 root.geometry('400x400')
-root.title('veers Roll the Dice')
+root.title('Roll the Dice')
 
 # Adding label into the frame
 l0 = tkinter.Label(root, text="veer's")
@@ -29,6 +29,7 @@ label1.image = image1
 # packing a widget in the parent widget 
 label1.pack( expand=True)
 
+my_btn = tkinter.Button(root, text = "Exit", command = root.quit).pack()
 # function activated by button
 def rolling_dice():
     image1 = ImageTk.PhotoImage(Image.open(random.choice(dice)))
