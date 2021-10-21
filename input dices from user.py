@@ -1,6 +1,6 @@
 import random
     
-def generateRoll(num):
+def generateRoll(num):#this is a comment
     diceAmount = []
     for i in range(int(num)):
         die = random.randrange(1, 7, 1)
