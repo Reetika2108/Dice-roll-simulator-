@@ -9,7 +9,7 @@ root.title('Roll the Dice')
 l0 = Label(root)
 l0.pack()
 
-l1 = Label(root, fg = "light green",
+l1 = Label(root, text = "Welcome to dice simulator !",fg = "light green",
         bg = "dark green",
         font = "Helvetica 16 bold italic")
 l1.pack()
