@@ -1,18 +1,15 @@
-import tkinter
-from PIL import Image, ImageTk #pip install Pillow
+from tkinter import *
+from PIL import Image, ImageTk
 import random
 
-# toplevel widget which represents the main window of an application
-root = tkinter.Tk()
+root = Tk()
 root.geometry('400x400')
 root.title('Roll the Dice')
 
-# Adding label into the frame
-l0 = tkinter.Label(root, text="veer's")
+l0 = Label(root)
 l0.pack()
 
-# adding label with different font and formatting
-l1 = tkinter.Label(root, text="Hello from veer's!", fg = "light green",
+l1 = Label(root, fg = "light green",
         bg = "dark green",
         font = "Helvetica 16 bold italic")
 l1.pack()
@@ -22,14 +19,12 @@ dice = ['die1.png', 'die2.png', 'die3.png', 'die4.png', 'die5.png', 'die6.png']
 # simulating the dice with random numbers between 0 to 6 and generating image
 image1 = ImageTk.PhotoImage(Image.open(random.choice(dice)))
 
-# construct a label widget for image
-label1 = tkinter.Label(root, image=image1)
+label1 = Label(root, image=image1)
 label1.image = image1
 
-# packing a widget in the parent widget 
 label1.pack( expand=True)
 
-my_btn = tkinter.Button(root, text = "Exit", command = root.quit).pack()
+my_btn = Button(root, text = "Exit", command = root.quit).pack()
 # function activated by button
 def rolling_dice():
     image1 = ImageTk.PhotoImage(Image.open(random.choice(dice)))
@@ -39,12 +34,10 @@ def rolling_dice():
     label1.image = image1
 
 
-# adding button, and command will use rolling_dice function
-button = tkinter.Button(root, text='Roll the Dice', fg='blue', command=rolling_dice)
+# exit button
+button = Button(root, text='Roll the Dice', fg='blue', command=rolling_dice)
 
-# pack a widget in the parent widget
+
 button.pack( expand=True)
 
-# call the mainloop of Tk
-# keeps window open
 root.mainloop()
