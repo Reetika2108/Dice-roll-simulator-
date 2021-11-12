@@ -35,7 +35,7 @@ def rolling_dice():
 
 
 # exit button
-button = Button(root, text='Roll the Dice', fg='white',bg = "blue",activefill = "blue", command=rolling_dice)
+button = Button(root, text='Roll the Dice', fg='white',bg = "green",activefill = "blue", command=rolling_dice)
 
 
 button.pack( expand=True)
